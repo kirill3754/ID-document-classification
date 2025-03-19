@@ -1,0 +1,50 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    environment:
+      - REACT_APP_API_URL=http://localhost:5000
+    networks:
+      - id-classifier-network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    depends_on:
+      - model-service
+    environment:
+      - MODEL_SERVICE_URL=http://model-service:8000/predict
+      - FLASK_ENV=development
+    volumes:
+      - backend-uploads:/tmp/uploads
+    networks:
+      - id-classifier-network
+
+  model-service:
+    build:
+      context: ./model
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - LOG_LEVEL=INFO
+    networks:
+      - id-classifier-network
+
+networks:
+  id-classifier-network:
+    driver: bridge
+
+volumes:
+  backend-uploads:
