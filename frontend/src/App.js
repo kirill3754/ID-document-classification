@@ -91,12 +91,30 @@ function App() {
         {prediction && (
           <div className="results-container">
             <h2>Classification Results</h2>
-            <p className="prediction">
-              <strong>Document Type:</strong> {prediction.class_name}
-            </p>
-            <p className="confidence">
-              <strong>Confidence:</strong> {prediction.confidence.toFixed(2)}%
-            </p>
+            
+            {prediction.llm_prediction && (
+              <div className="prediction-card">
+                <h3>LLM Classification</h3>
+                <p className="prediction">
+                  <strong>Document Type:</strong> {prediction.llm_prediction.class_name}
+                </p>
+                <p className="confidence">
+                  <strong>Confidence:</strong> {prediction.llm_prediction.confidence.toFixed(1)}%
+                </p>
+              </div>
+            )}
+            
+            {prediction.mobilenet_prediction && (
+              <div className="prediction-card">
+                <h3>MobileNet Classification</h3>
+                <p className="prediction">
+                  <strong>Document Type:</strong> {prediction.mobilenet_prediction.class_name}
+                </p>
+                <p className="confidence">
+                  <strong>Confidence:</strong> {prediction.mobilenet_prediction.confidence.toFixed(1)}%
+                </p>
+              </div>
+            )}
           </div>
         )}
       </main>
