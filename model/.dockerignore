@@ -1,0 +1,4 @@
+data/
+training/
+venv/
+__pycache__/

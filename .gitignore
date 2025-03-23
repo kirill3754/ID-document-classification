@@ -45,7 +45,6 @@ Thumbs.db
 logs/
 
 # Model files
-*.h5
 *.pkl
 *.bin
 *.pt
