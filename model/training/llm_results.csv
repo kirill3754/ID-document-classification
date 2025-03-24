@@ -1,0 +1,151 @@
+filename,real_class,predicted_class,confidence
+29.jpg,ID Card of Albania,ID Card of Albania,100.0
+33.jpg,ID Card of Albania,ID Card of Albania,100.0
+40.jpg,ID Card of Albania,ID Card of Albania,100.0
+41.jpg,ID Card of Albania,ID Card of Albania,100.0
+43.jpg,ID Card of Albania,ID Card of Albania,100.0
+44.jpg,ID Card of Albania,ID Card of Albania,100.0
+59.jpg,ID Card of Albania,ID Card of Albania,100.0
+61.jpg,ID Card of Albania,ID Card of Albania,100.0
+68.jpg,ID Card of Albania,ID Card of Albania,100.0
+74.jpg,ID Card of Albania,ID Card of Albania,100.0
+80.jpg,ID Card of Albania,ID Card of Albania,100.0
+83.jpg,ID Card of Albania,ID Card of Albania,100.0
+90.jpg,ID Card of Albania,ID Card of Albania,100.0
+92.jpg,ID Card of Albania,ID Card of Albania,100.0
+95.jpg,ID Card of Albania,ID Card of Albania,100.0
+01.jpg,Passport of Azerbaijan,Passport of Azerbaijan,100.0
+02.jpg,Passport of Azerbaijan,Passport of Azerbaijan,100.0
+03.jpg,Passport of Azerbaijan,Passport of Azerbaijan,100.0
+22.jpg,Passport of Azerbaijan,Passport of Azerbaijan,99.99
+29.jpg,Passport of Azerbaijan,Passport of Azerbaijan,99.33
+37.jpg,Passport of Azerbaijan,Passport of Azerbaijan,100.0
+41.jpg,Passport of Azerbaijan,Passport of Azerbaijan,100.0
+43.jpg,Passport of Azerbaijan,Passport of Azerbaijan,100.0
+45.jpg,Passport of Azerbaijan,Passport of Azerbaijan,100.0
+54.jpg,Passport of Azerbaijan,Passport of Azerbaijan,100.0
+75.jpg,Passport of Azerbaijan,Passport of Azerbaijan,100.0
+89.jpg,Passport of Azerbaijan,Passport of Azerbaijan,88.08
+93.jpg,Passport of Azerbaijan,Passport of Azerbaijan,100.0
+97.jpg,Passport of Azerbaijan,Passport of Azerbaijan,100.0
+99.jpg,Passport of Azerbaijan,ID Card of Azerbaijan,50.0
+04.jpg,ID Card of Spain,ID Card of Spain,100.0
+07.jpg,ID Card of Spain,ID Card of Spain,100.0
+17.jpg,ID Card of Spain,ID Card of Spain,100.0
+21.jpg,ID Card of Spain,ID Card of Spain,100.0
+35.jpg,ID Card of Spain,ID Card of Spain,100.0
+38.jpg,ID Card of Spain,ID Card of Spain,100.0
+40.jpg,ID Card of Spain,ID Card of Spain,100.0
+41.jpg,ID Card of Spain,ID Card of Spain,100.0
+61.jpg,ID Card of Spain,ID Card of Spain,100.0
+69.jpg,ID Card of Spain,ID Card of Spain,100.0
+77.jpg,ID Card of Spain,ID Card of Spain,100.0
+83.jpg,ID Card of Spain,ID Card of Spain,100.0
+87.jpg,ID Card of Spain,ID Card of Spain,100.0
+91.jpg,ID Card of Spain,ID Card of Spain,100.0
+92.jpg,ID Card of Spain,ID Card of Spain,100.0
+12.jpg,ID Card of Estonia,ID Card of Estonia,100.0
+13.jpg,ID Card of Estonia,ID Card of Estonia,100.0
+15.jpg,ID Card of Estonia,ID Card of Estonia,100.0
+23.jpg,ID Card of Estonia,ID Card of Estonia,100.0
+24.jpg,ID Card of Estonia,ID Card of Estonia,100.0
+25.jpg,ID Card of Estonia,ID Card of Estonia,100.0
+32.jpg,ID Card of Estonia,ID Card of Estonia,100.0
+49.jpg,ID Card of Estonia,ID Card of Estonia,100.0
+53.jpg,ID Card of Estonia,ID Card of Estonia,100.0
+57.jpg,ID Card of Estonia,ID Card of Estonia,100.0
+68.jpg,ID Card of Estonia,ID Card of Estonia,100.0
+70.jpg,ID Card of Estonia,ID Card of Estonia,100.0
+72.jpg,ID Card of Estonia,ID Card of Estonia,100.0
+80.jpg,ID Card of Estonia,ID Card of Estonia,100.0
+87.jpg,ID Card of Estonia,ID Card of Estonia,100.0
+01.jpg,ID Card of Finland,ID Card of Finland,100.0
+12.jpg,ID Card of Finland,ID Card of Finland,100.0
+13.jpg,ID Card of Finland,ID Card of Finland,100.0
+20.jpg,ID Card of Finland,ID Card of Finland,100.0
+21.jpg,ID Card of Finland,ID Card of Finland,100.0
+23.jpg,ID Card of Finland,ID Card of Finland,100.0
+36.jpg,ID Card of Finland,ID Card of Finland,100.0
+43.jpg,ID Card of Finland,ID Card of Finland,100.0
+46.jpg,ID Card of Finland,ID Card of Finland,100.0
+47.jpg,ID Card of Finland,ID Card of Finland,100.0
+50.jpg,ID Card of Finland,ID Card of Finland,100.0
+63.jpg,ID Card of Finland,ID Card of Finland,100.0
+90.jpg,ID Card of Finland,ID Card of Finland,100.0
+93.jpg,ID Card of Finland,ID Card of Finland,100.0
+98.jpg,ID Card of Finland,ID Card of Finland,100.0
+03.jpg,Passport of Greece,Passport of Greece,100.0
+06.jpg,Passport of Greece,Passport of Greece,100.0
+13.jpg,Passport of Greece,Passport of Greece,100.0
+19.jpg,Passport of Greece,Passport of Greece,100.0
+22.jpg,Passport of Greece,Passport of Greece,100.0
+30.jpg,Passport of Greece,Passport of Greece,100.0
+33.jpg,Passport of Greece,Passport of Greece,100.0
+34.jpg,Passport of Greece,Passport of Greece,100.0
+44.jpg,Passport of Greece,Passport of Greece,100.0
+47.jpg,Passport of Greece,Passport of Greece,100.0
+49.jpg,Passport of Greece,Passport of Greece,100.0
+50.jpg,Passport of Greece,Passport of Greece,100.0
+51.jpg,Passport of Greece,Passport of Greece,100.0
+53.jpg,Passport of Greece,Passport of Greece,100.0
+61.jpg,Passport of Greece,Passport of Greece,100.0
+07.jpg,Passport of Latvia,ID Card of Latvia,95.26
+12.jpg,Passport of Latvia,Passport of Latvia,100.0
+36.jpg,Passport of Latvia,Passport of Latvia,99.81
+43.jpg,Passport of Latvia,Passport of Latvia,100.0
+44.jpg,Passport of Latvia,Passport of Latvia,100.0
+49.jpg,Passport of Latvia,Passport of Latvia,99.94
+55.jpg,Passport of Latvia,Passport of Latvia,93.99
+57.jpg,Passport of Latvia,Passport of Latvia,100.0
+60.jpg,Passport of Latvia,Passport of Latvia,100.0
+64.jpg,Passport of Latvia,Passport of Latvia,100.0
+74.jpg,Passport of Latvia,Passport of Latvia,100.0
+87.jpg,Passport of Latvia,Passport of Latvia,100.0
+91.jpg,Passport of Latvia,Passport of Latvia,100.0
+93.jpg,Passport of Latvia,Passport of Latvia,100.0
+96.jpg,Passport of Latvia,Passport of Latvia,99.88
+04.jpg,Internal passport of Russia,Internal passport of Russia,99.85
+14.jpg,Internal passport of Russia,ID Card of Estonia,48.11
+20.jpg,Internal passport of Russia,ID Card of Estonia,81.67
+21.jpg,Internal passport of Russia,Internal passport of Russia,85.19
+23.jpg,Internal passport of Russia,ID Card of Russia,49.8
+26.jpg,Internal passport of Russia,ID Card of Estonia,98.02
+49.jpg,Internal passport of Russia,Internal passport of Russia,98.9
+60.jpg,Internal passport of Russia,Internal passport of Russia,99.81
+66.jpg,Internal passport of Russia,Internal passport of Russia,99.48
+67.jpg,Internal passport of Russia,Internal passport of Russia,96.26
+68.jpg,Internal passport of Russia,Internal passport of Russia,97.69
+76.jpg,Internal passport of Russia,Internal passport of Russia,99.95
+83.jpg,Internal passport of Russia,Internal passport of Russia,95.26
+84.jpg,Internal passport of Russia,Internal passport of Russia,99.14
+88.jpg,Internal passport of Russia,Internal passport of Russia,99.85
+00.jpg,Passport of Serbia,Passport of Serbia,100.0
+02.jpg,Passport of Serbia,Passport of Serbia,100.0
+08.jpg,Passport of Serbia,Passport of Serbia,100.0
+14.jpg,Passport of Serbia,Passport of Serbia,100.0
+18.jpg,Passport of Serbia,Passport of Serbia,100.0
+32.jpg,Passport of Serbia,Passport of Serbia,100.0
+37.jpg,Passport of Serbia,Passport of Serbia,100.0
+38.jpg,Passport of Serbia,Passport of Serbia,100.0
+46.jpg,Passport of Serbia,Passport of Serbia,100.0
+55.jpg,Passport of Serbia,Passport of Serbia,100.0
+57.jpg,Passport of Serbia,Passport of Serbia,100.0
+71.jpg,Passport of Serbia,Passport of Serbia,100.0
+79.jpg,Passport of Serbia,Passport of Serbia,100.0
+82.jpg,Passport of Serbia,Passport of Serbia,100.0
+87.jpg,Passport of Serbia,Passport of Serbia,100.0
+10.jpg,ID Card of Slovakia,ID Card of Slovakia,100.0
+13.jpg,ID Card of Slovakia,ID Card of Slovakia,100.0
+25.jpg,ID Card of Slovakia,ID Card of Slovakia,100.0
+39.jpg,ID Card of Slovakia,ID Card of Slovakia,100.0
+42.jpg,ID Card of Slovakia,ID Card of Slovakia,100.0
+47.jpg,ID Card of Slovakia,ID Card of Slovakia,100.0
+52.jpg,ID Card of Slovakia,ID Card of Slovakia,100.0
+60.jpg,ID Card of Slovakia,ID Card of Slovakia,100.0
+66.jpg,ID Card of Slovakia,ID Card of Slovakia,100.0
+74.jpg,ID Card of Slovakia,ID Card of Slovakia,100.0
+75.jpg,ID Card of Slovakia,ID Card of Slovakia,100.0
+78.jpg,ID Card of Slovakia,ID Card of Slovakia,100.0
+90.jpg,ID Card of Slovakia,ID Card of Slovakia,100.0
+91.jpg,ID Card of Slovakia,ID Card of Slovakia,100.0
+94.jpg,ID Card of Slovakia,ID Card of Slovakia,100.0

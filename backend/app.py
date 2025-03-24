@@ -8,6 +8,7 @@ from werkzeug.utils import secure_filename
 from loguru import logger
 import uvicorn
 import shutil
+import config
 
 app = FastAPI(title="Backend Service")
 
@@ -19,17 +20,16 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-# CORS(app)
 
-UPLOAD_FOLDER = "/tmp/uploads"
-ALLOWED_EXTENSIONS = {"jpg"}
-MODEL_SERVICE_URL = os.environ.get("MODEL_SERVICE_URL", "http://localhost:8000/predict")
-
-os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+MODEL_SERVICE_URL = os.environ.get("MODEL_SERVICE_URL", config.MODEL_SERVICE_URL)
+os.makedirs(config.UPLOAD_FOLDER, exist_ok=True)
 
 
 def allowed_file(filename):
-    return "." in filename and filename.rsplit(".", 1)[1].lower() in ALLOWED_EXTENSIONS
+    return (
+        "." in filename
+        and filename.rsplit(".", 1)[1].lower() in config.ALLOWED_EXTENSIONS
+    )
 
 
 @app.get("/test")
@@ -51,7 +51,7 @@ async def predict(image: UploadFile = File(...)) -> Dict[str, Any]:
     filepath = None
     try:
         filename = secure_filename(image.filename)
-        filepath = os.path.join(UPLOAD_FOLDER, filename)
+        filepath = os.path.join(config.UPLOAD_FOLDER, filename)
         with open(filepath, "wb") as buffer:
             shutil.copyfileobj(image.file, buffer)
 
@@ -80,6 +80,5 @@ async def predict(image: UploadFile = File(...)) -> Dict[str, Any]:
 
 
 if __name__ == "__main__":
-    # app.run(host="0.0.0.0", port=5000, debug=True)
     logger.info("Starting test server on http://localhost:5000")
     uvicorn.run(app, host="0.0.0.0", port=5000, log_level="info")

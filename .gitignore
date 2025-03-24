@@ -21,57 +21,30 @@ wheels/
 *.egg
 MANIFEST
 
-# Virtual Environment
 venv/
-env/
-ENV/
+
 .env
 
-# Jupyter Notebook
 .ipynb_checkpoints
 
-# IDE specific files
-.idea/
 .vscode/
-*.swp
-*.swo
 
-# OS specific files
 .DS_Store
 Thumbs.db
 
-# Log files
 *.log
-logs/
 
-# Model files
 *.pkl
 *.bin
 *.pt
 *.pth
 *.onnx
-model_checkpoints/
 
-# Data files
-*.csv
 *.json
 *.xml
-*.db
-*.sqlite3
 data/
 old/
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-.hypothesis/
-.pytest_cache/
+tmp/
 
 # Frontend specific
 node_modules/
@@ -104,5 +77,3 @@ yarn-error.log
 *.css.map
 *.js.map
 
-# Sass
-.sass-cache/
