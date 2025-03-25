@@ -40,7 +40,6 @@ Thumbs.db
 *.pth
 *.onnx
 
-*.json
 *.xml
 data/
 old/
