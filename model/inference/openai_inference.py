@@ -37,18 +37,18 @@ async def image_classification_llm(image_bytes, classes) -> str:
             "temperature": 0.0,
             "logprobs": True,
         }
-
+        logger.info("Sending image to OpenAI")
         completion = client.chat.completions.create(**params)
-
         linprob = min(
             [
                 np.round(np.exp(logprob.logprob) * 100, 2)
                 for logprob in completion.choices[0].logprobs.content
             ]
         )
+        logger.info(f"OpenAI response: {completion.choices[0].message.content}")
         return completion.choices[0].message.content, linprob
     except Exception as e:
         logger.error(f"Error in OPENAI inference: {str(e)}")
         return ("Error in classification", 0.0)
 
-    return "rus_internalpassport"
+    return "test_class"
