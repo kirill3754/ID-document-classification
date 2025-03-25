@@ -1,16 +1,24 @@
 import base64
 import os
 from dotenv import load_dotenv
-from openai import OpenAI
+
+from openai import AsyncOpenAI
 from loguru import logger
 import numpy as np
 
 load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-client = OpenAI(api_key=OPENAI_API_KEY)
+try:
+    client = AsyncOpenAI(api_key=OPENAI_API_KEY)
+    logger.info("OpenAI client created")
+except:
+    client = None
+    logger.error("OpenAI client is disabled")
 
 
 async def image_classification_llm(image_bytes, classes) -> str:
+    if client is None:
+        return "OpenAI is disabled", 0.0
     try:
         # Encode the image bytes to base64
         encoded_image = base64.b64encode(image_bytes).decode("utf-8")
@@ -38,7 +46,7 @@ async def image_classification_llm(image_bytes, classes) -> str:
             "logprobs": True,
         }
         logger.info("Sending image to OpenAI")
-        completion = client.chat.completions.create(**params)
+        completion = await client.chat.completions.create(**params)
         linprob = min(
             [
                 np.round(np.exp(logprob.logprob) * 100, 2)

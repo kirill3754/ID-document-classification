@@ -1,16 +1,16 @@
 # Task 2: ID Classifier App
 
-This application does ID document classification using CNN and LLM.
+This application does ID document classification. It primarily uses a CNN trained on provided images (details in report). An OpenAI LLM is included for comparison but is not a requirement for application to run.
 It consists of a frontend, backend, and model service.
 
 ## Prerequisites
 
 - Docker
-- OpenAI API key
+- OpenAI API key (optional)
 
 ## Quick Start
 
-### 1. Set up your OpenAI API key
+### 1. Set up your OpenAI API key (optional)
 
 Create a `.env` file in the `model/inference` directory with your OpenAI API key:
 
@@ -25,7 +25,7 @@ Never commit your API key to version control. The `.env` files are included in `
 From the project root directory, run:
 
 ```
-docker-compose up -d
+docker-compose up --build
 ```
 
 

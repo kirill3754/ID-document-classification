@@ -39,14 +39,13 @@ async def health_check() -> Dict[str, str]:
 
 @app.post("/predict")
 async def predict(image: UploadFile = File(...)) -> Dict[str, Any]:
-    if image is None:
-        raise HTTPException(status_code=400, detail="No image provided")
-
-    if image.filename == "":
-        raise HTTPException(status_code=400, detail="No image selected")
+    if image is None or image.filename == "":
+        logger.error(f"No image")
+        raise HTTPException(status_code=400)
 
     if not allowed_file(image.filename):
-        raise HTTPException(status_code=400, detail="File type not allowed")
+        logger.error(f"File type not allowed")
+        raise HTTPException(status_code=415)
 
     filepath = None
     try:
@@ -63,7 +62,7 @@ async def predict(image: UploadFile = File(...)) -> Dict[str, Any]:
 
         if response.status_code != 200:
             logger.error(f"Model service returned error: {response.text}")
-            raise HTTPException(status_code=500, detail="Model service error")
+            raise HTTPException(status_code=500)
 
         result = response.json()
         return result
@@ -71,8 +70,8 @@ async def predict(image: UploadFile = File(...)) -> Dict[str, Any]:
     except HTTPException as http_exc:
         raise http_exc
     except Exception as e:
-        logger.exception("Error during prediction")
-        raise HTTPException(status_code=500, detail=str(e))
+        logger.exception(f"Error during prediction: {str(e)}")
+        raise HTTPException(status_code=500)
 
     finally:
         if filepath and os.path.exists(filepath):
