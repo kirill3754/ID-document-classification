@@ -1,7 +1,7 @@
-# ID Classifier App
+# Task 2: ID Classifier App
 
 This application does ID document classification using CNN and LLM.
-It consists of a frontend, backend API, and model service components.
+It consists of a frontend, backend, and model service.
 
 ## Prerequisites
 
@@ -55,9 +55,10 @@ docker-compose up -d
 │   ├── Dockerfile              
 │   ├── requirements.txt        
 │   └── tmp/                    # Temporary directory for file processing
+│
 ├── frontend/                   # Frontend React application
 │   ├── Dockerfile       
-│   ├── nginx.conf              # Nginx server config
+│   ├── nginx.conf              # Server config
 │   ├── package.json            # NPM dependencies
 │   ├── build/                  # Production build
 │   ├── public/                 # Public assets
@@ -65,6 +66,7 @@ docker-compose up -d
 │       ├── App.css             # Main app styles
 │       ├── App.js              # Main app component
 │       └── ...                 # Other React components
+│
 └── model/                      # ML model service
     ├── .dockerignore           
     ├── config.py               
@@ -85,12 +87,12 @@ docker-compose up -d
 ### Communication Flow
 
 ```
-┌───────────┐ HTTP ┌────────────┐ HTTP ┌────────────┐ API ┌────────────┐ API ┌────────┐
+┌───────────┐      ┌────────────┐      ┌────────────┐     ┌────────────┐     ┌────────┐
 │   User    │─────►│  Frontend  │─────►│  Backend   │────►│   Model    │────►│  CNN   │
 │ (Browser) │      │   (React)  │      │  (FastAPI) │     │  Service   │◄────└────────┘
 │           │◄─────│            │◄─────│            │◄────│ (FastAPI)  │────►┌────────┐
-└───────────┘ HTTP └────────────┘ HTTP └────────────┘ API └────────────┘◄────│  LLM   │
-                                                                         API └────────┘
+└───────────┘      └────────────┘      └────────────┘     └────────────┘◄────│  LLM   │
+                                                                             └────────┘
 ```
 
 1. User uploads an ID document through the frontend interface
@@ -102,8 +104,7 @@ docker-compose up -d
 ## Troubleshooting
 
 1. Verify your OpenAI API key
-2. Check the logs for each service
-3. Ensure all ports are available
+2. Ensure all ports are available
 
 
 # MobileNetV2 CNN Model Report
@@ -183,8 +184,8 @@ rus_internalpassport       1.00      0.80      0.89        15
 ```
 
 ## Model Save
-- Best model saved at: `../models/mobilenetv2_best.h5`
-- Class indices saved at: `../models/class_indices.npy`
+- Best model saved at: `model/models/mobilenetv2_best.h5`
+- Class indices saved at: `model/models/class_indices.npy`
 
 # GPT-4o-mini LLM Model Report
 
@@ -196,7 +197,7 @@ rus_internalpassport       1.00      0.80      0.89        15
 - **Model**: GPT-4o-mini
 - **Temperature**: 0.0 (deterministic response)
 - **Prompt**: "Classify the following image into one of the following classes: {classes}. return one class name only."
-- **Output Confidence**: Calculated from token logprobs
+- **Output Confidence**: Calculated from min of all token logprobs
 
 ## Results
 
@@ -222,7 +223,7 @@ Internal passport of Russia       1.00      0.73      0.85        15
                   macro avg       0.89      0.87      0.88       150
                weighted avg       0.98      0.96      0.97       150
 ```
-
+other covers all the odd returns from the LLM
 ### Confusion Matrix
 
 ```
